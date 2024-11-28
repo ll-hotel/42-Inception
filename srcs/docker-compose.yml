@@ -1,0 +1,8 @@
+services:
+  nginx:
+    env_file: .env
+    container_name: nginx
+    build: requirements/nginx
+    ports:
+      - 4242:443
+    restart: on-failure
